@@ -8,23 +8,28 @@ namespace Atividade_O_O
 {
     public class Personagem
     {
-        public string? Nome { get; set; }
-        public string? Categoria { get; set; }
-        public int? Nivel { get; set; }
-        public int? Forca { get; set; }
-        public int? Agilidade { get; set; }
-        public int? Inteligencia { get; set; }
-        public int? Vida { get; set; }
+        private string? Nome { get; set; }
+        private string? Categoria { get; set; }
+        private int Nivel { get; set; }
+        private int Forca { get; set; }
+        private int Agilidade { get; set; }
+        private int Inteligencia { get; set; }
+        private int Vida { get; set; }
 
-        public Personagem(string? nome, string? categoria, int? nivel, int? forca, int? agilidade, int? inteligencia, int? vida)
+        public Personagem(string nome, string categoria, int nivel, int forca, int agilidade, int inteligencia, int vida)
         {
-            Nome = nome;
-            Categoria = categoria;
-            Nivel = nivel;
-            Forca = forca;
-            Agilidade = agilidade;
-            Inteligencia = inteligencia;
-            Vida = vida;
+            this.Nome = nome;
+            this.Categoria = categoria;
+            this.Nivel = nivel;
+            this.Forca = forca;
+            this.Agilidade = agilidade;
+            this.Inteligencia = inteligencia;
+            this.Vida = vida;
+        }
+
+        public void ExibirStatus()
+        {
+            Console.WriteLine($"Nome: {this.Nome}, Categoria: {this.Categoria}, Nivel: {this.Nivel}, Força; {this.Forca}, Inteligencia: {this.Inteligencia}, Vida: {this.Vida}");
         }
     }
 }

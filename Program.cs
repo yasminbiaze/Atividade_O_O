@@ -201,22 +201,25 @@ internal class Program
         ContaGenerica2 contagenerica = new ContaGenerica2("Banco", "Agencia", "Conta", 200);
 
         Console.WriteLine($"\n----------------------------------------------------------------------------------------------------------------------------------------------");
-        Personagem personagem1 = new Personagem("Gandalf", "Mago", 5, 7, 10, 8, 6);
 
-        Console.WriteLine("---- Dados do Personagem ----");
-        Console.WriteLine($"Nome: {personagem1.Nome}");
-        Console.WriteLine($"Categoria: {personagem1.Categoria}");
-        Console.WriteLine($"Nivel: {personagem1.Nivel}");
-        Console.WriteLine($"Força: {personagem1.Forca}");
-        Console.WriteLine($"Inteligência: {personagem1.Inteligencia}");
-        Console.WriteLine($"Vida: {personagem1.Vida}");
+        Console.WriteLine("\nExercício 09");
+
+        Personagem personagem1 = new Personagem("Merlin", "Mago", 10, 25, 85, 100, 100);
+        Personagem personagem2 = new Personagem("Arthur", "Guerreiro", 12, 90, 75, 70, 80);
+        Personagem personagem3 = new Personagem("Lancelot", "Cavaleiro", 11, 100, 68, 35, 90);
+
+        personagem1.ExibirStatus();
+        personagem2.ExibirStatus();
+        personagem3.ExibirStatus();
 
         Console.WriteLine($"\n----------------------------------------------------------------------------------------------------------------------------------------------");
-        Retangulo retangulo1 = new Retangulo(5, 3);
-        Circulo circulo1 = new Circulo(4);
+        Console.WriteLine("\nExercício 11");
 
-        Console.WriteLine("Área do Retângulo: " + retangulo1.CalcularArea());
-        Console.WriteLine("Área do Circulo: " + circulo1.CalcularArea());
+        Forma forma1 = new Retangulo(5, 3);
+        Forma forma2 = new Circulo(4);
 
+        // Aplicando polimorfismo
+        Console.WriteLine($"Área do Retângulo: {forma1.CalcularArea()}");
+        Console.WriteLine($"Área do Círculo: {forma2.CalcularArea():F2}");
     }
 }
